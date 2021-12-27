@@ -1,0 +1,262 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+body {
+    background: var(--preto);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 20px;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 8px;
+    margin: 0 56px;
+}
+
+header .logoWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+header .logo {
+    background-image: url(../assets/logosvg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    text-indent: 110%;
+    width: 134px;
+    height: 36px;
+
+    color: var(--vermelho);
+    font-family: "Arial Black", Times;
+    font-size: 40px;
+}
+
+header .logoX {
+    background-image: url(../assets/x.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    overflow: hidden;
+    text-indent: 110%;
+    width: 40px;
+    height: 40px;
+
+    font-family: "Arial Black", Times;
+    font-size: 40px;
+}
+
+header .logoTwitch {
+    background-image: url(../assets/twitchlogosvg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    text-indent: 110%;
+    width: 40px;
+    height: 40px;
+
+    font-family: "Arial Black", Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+header .user-nav {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+header .user-nav div {
+    margin-right: 20px;
+}
+
+header .user-nav .avatar {
+    width: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../img/twitchbanner.jpg);
+    background-color: rgb(143, 72, 254);
+
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descriçao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    margin-top: 10%;
+    font-size: 40px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    max-height: 256px;
+    max-width: 455px;
+    display: block;
+}
+
+.item:hover {
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.carrosel-filmes {
+    margin: 10px 20px 20px;
+}
+
+.carrosel-filmes h4 {
+    margin-left: 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 20px;
+}
+
+.filmes {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+}
+
+/* Chrome, Safari, Opera */
+.filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.box {
+    width: 100%;
+    max-height: 256px;
+    min-width: 455px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px;
+    overflow: hidden;
+}
+
+.img {
+    max-height: 256px;
+    max-width: 455px;
+}
+
+.box:hover {
+    margin: 20px 60px;
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+.left {
+    left: 20px;
+    background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.right {
+    right: 20px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.left,
+.right {
+    border: none;
+    height: 256px;
+    opacity: 0.8;
+    background-color: transparent;
+
+    text-decoration: none;
+    padding: 32px 0px;
+
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.left:hover {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,1));
+    border: 1px solid white;
+}
+
+.right:hover {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,1));
+    border: 1px solid white;
+}
